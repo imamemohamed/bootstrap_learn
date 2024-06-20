@@ -1,0 +1,97 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Redressed&display=swap');
+
+/*créer des clases afin d'utiliser facilement nos deux polices*/
+.merriweather{
+    font-family: 'Merriweather',serif;
+}
+.redressed{
+    font-family: 'Redressed',cursive;
+}
+/*navbar*/
+
+/*pour survoler les éléments link du navbar*/
+
+.css-navbar .nav-link{
+    border-bottom: 1px solid transparent;
+    transition: padding-bottom .4s ease-in-out, border-color .3s ease;
+}
+
+.css-navbar .nav-link:hover{
+    /*va survoler au dépand de la transition d'en haut
+    en laissant 20px en bas sur 4s*/
+    padding-bottom: 20px;
+    /*va remplacer la couleur transparent qu'on a mis en haut*/
+    border-bottom-color: var(--bs-teal);
+}
+
+/*modifie le navbar : couleur et taille du texte*/
+.css-navbar{
+    background: rgba(0, 0, 0, 0.55);
+    /*la couleur de police qu'on va charger dépuis goole font*/
+    font-family: 'Merriweather', serif;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.55);
+    z-index: 99;
+}
+
+/*le bouton de navbar*/
+.btn-order{
+    color: var(--bs-teal);
+    /*on change la bordure par défaut de bootstrap*/
+    border-color: var(--bs-teal);
+    /*on change la transision par défaut de bootstrap*/
+    transition: 0.5s;
+}
+ 
+/*pourquoi le active : si on parle de hover, soit on peut mettre
+un active ou de focuste*/
+.btn-order:hover,
+.btn-order:active{
+    color: #fff;
+    background: var(--bs-teal);
+}
+
+
+/*la classe bannier qui contient la premier image
+    -*/
+
+.banner, 
+.order-form{/*on met aussi notre dernier formulaire ce paralaxe*/
+    background: 
+        linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+        url(../image/643e779456e60.770.jpg) center center fixed no-repeat;
+    height: 800px;
+    /*cover = couverture qui va prendre toute l'espace.
+        center center = centrer sur l'axe ox et oy*/
+    background-size: cover;
+}
+
+/*on doit forcer une hauter de notre formulaire puisque
+la hauteur du paralaxe était grande*/
+
+.order-form{
+    height: 500px;
+}
+
+.banner-desc{
+    font-size: 48px;
+    font-weight: 400px;
+    color: #fff;
+}
+/*.banner h1{
+    font-size: 36px;
+}*/
+
+/*******************************/
+/*3ème section
+ un bg avec une image est une couleur en dessus*/
+/*******************************/
+
+.css-menu{
+    background: 
+        linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+        url(../image/lui.jpg) center center fixed no-repeat;
+    background-size: cover;
+    height: 1000px;
+    
+}

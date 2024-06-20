@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--le css s'execute de bas vers le haut donc, on met le css
+    style en bas afin d'ecraser certain fonctionnaliter de bootstrap-->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <title>projet</title>
+  </head>
+  <body>
+    <!--header-->
+    <!--le css-navbar une classe que j'ai ajouter afin de styliser moi ^m le navbar-->
+    <!--pour mettre une couleur de font sur navbar, il faut enlever sa
+    classe par défaut -->
+    <!--ajout du position fixe et un with de 100 afin que la position fixe 
+    ne coupe pas la nav-->
+    <nav class="css-navbar navbar position-fixed navbar-expand-lg navbar-dark w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="#">Le paradis</a>
+          <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!--les pe-4 va nous permettre d'espacer nos li-->
+              <li class="nav-item pe-4">
+                <a class="nav-link active " aria-current="page" href="#">Accueil</a>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="nav-link" href="#">Découvrir</a>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="nav-link" href="#">Les classique</a>
+              </li>
+              <li class="nav-item pe-4">
+                <!--rounded-0 on ne veut pas un bouton arrondi
+                et btn-order c'est une classe qu'on va le manipuler sur css-->
+                <a class="btn btn-order rounded-0" href="#">Passer la commande</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--pour centrer tout les trucs de notre section
+        d-flex justify-content-center align-items-center-->
+      <section class="banner d-flex justify-content-center align-items-center pt-5">
+        <div class="container my-5 py-5">
+            <div class="row">
+                <!--on met rien pour la premiere colonne et
+                on met tout dans la deuxieme colonne-->
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <h1 class="text-capitalize py-3 redressed banner-desc">
+                      Lorem ipsum dolor sit amet consectetur 
+                      <br>eaque quis illum impedit
+                   </h1>
+                    <p>
+                        <!--btn lg : bouton plus grand-->
+                        <button 
+                            class="btn btn-order btn-lg me-5 rounded-0 merriweather">
+                            Commander maintenant
+                        </button>
+                        <button 
+                            class="btn btn-outline-info btn-lg rounded-0 merriweather">
+                            Reserver
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="avilable merriweather py-5">
+          <div class="container">
+            <div class="row">
+              <div class="card mb-3 border-0 rounded-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <!--la classe img-fluid permet seulement que l'image prenne 100% de 6 col qui 
+                    sont disponible-->
+                      <img src="assets/image/imgj.jpg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text 
+                        below as a natural lead-in
+                        lo<p class="card-text">
+                        <a href="#" class="text-muted btn">Last updated 3 mins ago</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card my-5 border-0 rounded-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text 
+                        below as a natural lead-in
+                        lo<p class="card-text">
+                        <a href="#" class="text-muted btn">Last updated 3 mins ago</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="assets/image/643e779456e60.770.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="assets/image/imgj.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="assets/image/kk.jpg" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 border-0 rounded-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <!--la classe img-fluid permet seulement que l'image prenne 100% de 6 col qui 
+                    sont disponible-->
+                      <img src="assets/image/imgj.jpg" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text 
+                        below as a natural lead-in
+                        lo<p class="card-text">
+                        <a href="#" class="text-muted btn">Last updated 3 mins ago</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="css-menu py-5 marrieweather text-light">
+        <div class="container">
+          <div class="row">
+            <h3 class="text-center text-light merriweather">Nos variétées</h3>
+            <!--plus la font size est petit plus la taille est grand-->
+            <div class="card text-center bg-transparent border-0 mb-4">
+              <div class="card-header redressed fs-4 border-0">
+                <!--pour centrer les éléments de nav
+                un justify content-center .pas besoin de display flex car
+                le nav l'implemente déjà-->
+                <ul class="nav nav-tabs justify-content-center card-header-tabs ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="true" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body text-light">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <!--ecran de moyen taille: deux colonnes et en dessous de ça
+          c'est une colonne-->
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="assets/im/643e779456e60.770.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="assets/im/lui.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <!--on demande à ce que si on est dans les écrans de plus
+            petit taille la colonne n'affiche pas. mais il est necessaire
+            de preciser aussi que si on est dans les taille moyennes
+            ces dernieres affiche.       d= display
+            si on utilise d-sm-none : les écrans de moins de 576px ne vont pas implementer ça-->
+            <div class="col d-none d-md-block">
+              <div class="card">
+                <img src="assets/im/imgj.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-none d-md-block">
+              <div class="card">
+                <img src="assets/im/3801.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cc-carosel merriweather bg-dark text-light text-center py-5">
+          <div class="container">
+            <div class="row">
+              <h2 class="text-uppercase">Meilleurs recettes</h2>
+              <div class="col pb-5">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Dolore saepe fugiat vel nobis perferendis debitis ab esse
+                 consequuntur? Aspernatur facilis,
+                 sequi rem quidem corporis quis autem aperiam repudiandae 
+                 quam dolorem?
+              </div>
+            </div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/image/643e779456e60.770.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/image/imgj.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/image/kk.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block ">
+                    <h5 class="fw-bolder fs-4 text-dark">First slide label</h5>
+                    <p class="fw-bolder fs-4 text-dark">Some representative placeholder content for the first slide.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+      </section>
+
+      <section class="order-form py-5">
+        <!--le paralaxe de bannier sera mis ici-->
+        <div class="container">
+          <h2 class="marriweather text-center text-light mb-4">
+            Passer une commande
+          </h2>
+          <form>
+            <div class="row">
+              <div class="col md-6 col-sm">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      placeholder="votre noom" 
+                    />
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-utesils"></i></label>
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Choisir un menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-sort-numeric-up-alt"></i></label>
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Nombre de personnes</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col md-6 col-sm">
+                <div class="input-group mb-3">
+                  <input 
+                      type="email" 
+                      class="form-control" 
+                      placeholder="votre email" 
+                    />
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
+                </div>
+                <div class="input-group mb-3">
+                  <input 
+                      type="number" 
+                      class="form-control" 
+                      placeholder="numero de natel" 
+                  />
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
+                </div>
+                <div class="input-group mb-3">              
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      placeholder="Adresse zone exp: mirontsy" 
+                  />
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-home"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Préciser les nombres de personnes</span>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="exemple: 30" 
+                  />
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">Autres informations</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="cc-footer text-center  bg-light py-5">
+        <div class="container">
+          <div class="row ">
+            <div class="col md-3 mx-auto">
+              <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </nav>
+            </div>
+            <div class="col md-3 mx-auto">
+              <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </nav>
+            </div>
+            <div class="col md-3 d-none d-md-block">
+              <nav class="nav flex-column ">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </nav>
+            </div>
+            <div class="col md-3  d-none d-md-block">
+              <nav class="nav flex-column ">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </nav>
+            </div>
+          </div>
+          <div class="row">
+            <p class="pt-5">Leçon pour apprendre bootstrap, moha. </p>
+          </div>
+        </div>
+      </section>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
